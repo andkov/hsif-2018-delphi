@@ -3,7 +3,7 @@
 
 
 This report was automatically generated with the R package **knitr**
-(version 1.11).
+(version 1.20).
 
 
 ```r
@@ -23,9 +23,15 @@ if( base::basename(base::getwd()) != "RAnalysisSkeleton" ) {
   base::stop("The working directory should be set to the root of the package/repository.  ",
        "It's currently set to `", base::getwd(), "`.")
 }
+```
 
+```
+## Error in eval(expr, envir, enclos): The working directory should be set to the root of the package/repository.  It's currently set to `C:/Users/koval/Documents/GitHub/andkov/hsif-2018-delphi`.
+```
+
+```r
 # Install the necessary packages ------------------------------------------
-path_install_packages <- "./utility/install_packages.R"
+path_install_packages <- "./utility/install-packages.R"
 if( !file.exists(path_install_packages)) {
   base::stop("The file `", path_install_packages, "` was not found.  Make sure the working directory is set to the root of the repository.")
 }
@@ -33,79 +39,216 @@ base::source(path_install_packages, local=new.env())
 ```
 
 ```
+## Loading required namespace: devtools
+```
+
+```
 ## Downloading GitHub repo OuhscBbmc/OuhscMunge@master
+## from URL https://api.github.com/repos/OuhscBbmc/OuhscMunge/zipball/master
+```
+
+```
 ## Installing OuhscMunge
-## "C:/PROGRA~1/R/R-32~1.2PA/bin/x64/R" --no-site-file --no-environ  \
-##   --no-save --no-restore CMD INSTALL  \
-##   "C:/Users/Will/AppData/Local/Temp/RtmpC0BA90/devtools2be013fc77fc/OuhscBbmc-OuhscMunge-99b5960"  \
-##   --library="D:/Users/Will/Documents/R/win-library/3.2" --install-tests 
+```
+
+```
+## Installing 1 package: DBI
+```
+
+```
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'DBI' successfully unpacked and MD5 sums checked
 ## 
-## package_janitor is loading the list of package depencies.
-## package_janitor is updating the existing packages from CRAN.
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
 ```
 
 ```
-## Warning: package 'MASS' in library 'C:/Program Files/R/R-3.2.2patched/
-## library' will not be updated
+## Installing 1 package: devtools
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
 ```
 
 ```
-## Warning: package 'Matrix' in library 'C:/Program Files/R/R-3.2.2patched/
-## library' will not be updated
+## package 'devtools' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
 ```
 
 ```
-## Warning: package 'mgcv' in library 'C:/Program Files/R/R-3.2.2patched/
-## library' will not be updated
+## Installing 1 package: digest
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
 ```
 
 ```
-## package_janitor is installing the the `devtools` and `httr` packages from CRAN if necessary.
-## package_janitor is installing the CRAN packages:
-## `classInt` exists, and verifying it's dependencies are installed too.
-## `colorspace` exists, and verifying it's dependencies are installed too.
-## The `devtools` package does not need to be in the list of package dependencies.  It's updated automatically.
-## `digest` exists, and verifying it's dependencies are installed too.
-## `dplyr` exists, and verifying it's dependencies are installed too.
-## Skipping 2 packages ahead of CRAN: DBI, RSQLite
-## `evaluate` exists, and verifying it's dependencies are installed too.
-## `ggplot2` exists, and verifying it's dependencies are installed too.
-## `ggthemes` exists, and verifying it's dependencies are installed too.
-## `googleVis` exists, and verifying it's dependencies are installed too.
-## `ggmap` exists, and verifying it's dependencies are installed too.
-## Skipping 1 packages ahead of CRAN: DBI
-## `grid` exists, and verifying it's dependencies are installed too.
-## `gridExtra` exists, and verifying it's dependencies are installed too.
-## `knitr` exists, and verifying it's dependencies are installed too.
-## `lubridate` exists, and verifying it's dependencies are installed too.
-## `modeest` exists, and verifying it's dependencies are installed too.
-## `plyr` exists, and verifying it's dependencies are installed too.
-## `random` exists, and verifying it's dependencies are installed too.
-## `RColorBrewer` exists, and verifying it's dependencies are installed too.
-## `readr` exists, and verifying it's dependencies are installed too.
-## `reshape2` exists, and verifying it's dependencies are installed too.
-## `rmarkdown` exists, and verifying it's dependencies are installed too.
-## `stringi` exists, and verifying it's dependencies are installed too.
-## `stringr` exists, and verifying it's dependencies are installed too.
-## `testit` exists, and verifying it's dependencies are installed too.
-## `testthat` exists, and verifying it's dependencies are installed too.
-## `tidyr` exists, and verifying it's dependencies are installed too.
-## Skipping 1 packages ahead of CRAN: DBI
+## 
+##   There is a binary version available (and will be installed) but
+##   the source version is later:
+##        binary source
+## digest 0.6.17 0.6.18
+## 
+## package 'digest' successfully unpacked and MD5 sums checked
 ```
 
 ```
-## Error in install_packages(behind, repos = attr(object, "repos"), type = attr(object, : formal argument "repos" matched by multiple actual arguments
+## Warning: cannot remove prior installation of package 'digest'
+```
+
+```
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: glue
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'glue' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: lubridate
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'lubridate' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: odbc
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## also installing the dependencies 'prettyunits', 'bit', 'blob', 'bit64'
+```
+
+```
+## package 'prettyunits' successfully unpacked and MD5 sums checked
+## package 'bit' successfully unpacked and MD5 sums checked
+## package 'blob' successfully unpacked and MD5 sums checked
+## package 'bit64' successfully unpacked and MD5 sums checked
+## package 'odbc' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: purrr
+```
+
+```
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'purrr' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: remotes
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'remotes' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: rlang
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'rlang' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## Installing 1 package: testit
+## Installing package into 'C:/Users/koval/Documents/R/win-library/3.4'
+## (as 'lib' is unspecified)
+```
+
+```
+## package 'testit' successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+## 	C:\Users\koval\AppData\Local\Temp\RtmpMtSXdD\downloaded_packages
+```
+
+```
+## "C:/PROGRA~1/R/R-34~1.4/bin/x64/R" --no-site-file --no-environ --no-save  \
+##   --no-restore --quiet CMD INSTALL  \
+##   "C:/Users/koval/AppData/Local/Temp/RtmpMtSXdD/devtools13f843e042e0/OuhscBbmc-OuhscMunge-b614fcf"  \
+##   --library="C:/Users/koval/Documents/R/win-library/3.4" --install-tests
+```
+
+```
+## 
+```
+
+```
+## Installation failed: Command failed (1)
+```
+
+```
+## Error in loadNamespace(name): there is no package called 'OuhscMunge'
 ```
 
 ```r
 base::rm(path_install_packages)
 
 # Load the necessary packages ---------------------------------------------
-base::requireNamespace("base", quietly=T)
-base::requireNamespace("knitr", quietly=T)
-base::requireNamespace("markdown", quietly=T)
-base::requireNamespace("testit", quietly=T)
+base::requireNamespace("base")
+base::requireNamespace("knitr")
+base::requireNamespace("markdown")
+```
 
+```
+## Loading required namespace: markdown
+```
+
+```r
+base::requireNamespace("testit")
+```
+
+```
+## Loading required namespace: testit
+```
+
+```r
 ######################################################################################################
 #' The following example comes from https://github.com/wibeasley/Wats.  Rename the paths appropriately.
 
@@ -177,9 +320,16 @@ sessionInfo()
 ```
 
 ```
-## R version 3.2.2 Patched (2015-10-11 r69514)
+## Warning in FUN(X[[i]], ...): DESCRIPTION file of package 'digest' is
+## missing or broken
+```
+
+```
+## R version 3.4.4 (2018-03-15)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows >= 8 x64 (build 9200)
+## 
+## Matrix products: default
 ## 
 ## locale:
 ## [1] LC_COLLATE=English_United States.1252 
@@ -191,30 +341,11 @@ sessionInfo()
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
-## other attached packages:
-## [1] magrittr_1.5  ggplot2_1.0.1
-## 
 ## loaded via a namespace (and not attached):
-##  [1] reshape2_1.4.1      ggthemes_2.2.1      lattice_0.20-33    
-##  [4] testthat_0.11.0     colorspace_1.2-6    htmltools_0.2.6    
-##  [7] yaml_2.1.13         e1071_1.6-7         DBI_0.3.1.9008     
-## [10] sp_1.2-1            RColorBrewer_1.1-2  jpeg_0.1-8         
-## [13] plyr_1.8.3          stringr_1.0.0       munsell_0.4.2      
-## [16] gtable_0.1.2        devtools_1.9.1      RgoogleMaps_1.2.0.7
-## [19] mapproj_1.2-4       memoise_0.2.1       evaluate_0.8       
-## [22] labeling_0.3        knitr_1.11          modeest_2.1        
-## [25] OuhscMunge_0.1.5    parallel_3.2.2      curl_0.9.4         
-## [28] class_7.3-14        markdown_0.7.7      proto_0.3-10       
-## [31] Rcpp_0.12.2         geosphere_1.4-3     readr_0.2.2        
-## [34] scales_0.3.0        classInt_0.1-23     formatR_1.2.1      
-## [37] googleVis_0.5.10    gridExtra_2.0.0     testit_0.4         
-## [40] rjson_0.2.15        png_0.1-7           digest_0.6.8       
-## [43] stringi_1.0-1       dplyr_0.4.3         RJSONIO_1.3-0      
-## [46] grid_3.2.2          tools_3.2.2         maps_3.0.0-2       
-## [49] lazyeval_0.1.10     tidyr_0.3.1         crayon_1.3.1       
-## [52] MASS_7.3-44         rsconnect_0.3.79    random_0.2.5       
-## [55] lubridate_1.3.3     assertthat_0.1      rmarkdown_0.8.1    
-## [58] httr_1.0.0          R6_2.1.1            ggmap_2.5.2
+```
+
+```
+## Error in x[["Version"]]: subscript out of bounds
 ```
 
 ```r
@@ -222,6 +353,6 @@ Sys.time()
 ```
 
 ```
-## [1] "2015-11-30 09:56:00 CST"
+## [1] "2018-10-11 09:49:11 PDT"
 ```
 
