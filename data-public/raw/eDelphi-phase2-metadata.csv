@@ -1,0 +1,60 @@
+qname,target,subject,component,qlabel,qname_fellow,qname_host,qname_academic
+q1,Fellow,Contribution,Common,Research/analytic skills and expertise,q1,q20,q40
+q2,Fellow,Contribution,Common,Capacity-building resource,q2,q21,q41
+q3,Fellow,Contribution,Common,Knowledge Translation,q3,q22,q42
+q4,Fellow,Contribution,Common,"Networking, building relationships and collaboration",q4,q23,q43
+q5,Fellow,Contribution,Common,Leadership,q5,q24,q44
+q6,Fellow,Contribution,Common,"New perspectives, interventions, processes, methods or strategies",q6,q25,q45
+q7,Fellow,Contribution,Common,Providing mentorship or education,q7,q26,q46
+q8,Fellow,Contribution,Common,Limited to no contribution,q8,q27,q47
+q9,Fellow,Contribution,Unique,HSIF Impact Project,,,
+q10,Fellow,Contribution,Unique,Grantsmanship: applying for or obtaining funding,,,
+q11,Fellow,Criterion,Common,Establishment of networks or collaborative relationships,q11,q29,q51
+q12,Fellow,Criterion,Common,HSIF impact project completion or advancement,q12,q30,q52
+q13,Fellow,Criterion,Common,Development of enriched core competencies or other professional skills,q13,q31,q53
+q14,Fellow,Criterion,Common,Academic or research productivity,q14,q32,q54
+q15,Fellow,Criterion,Common,Better knowledge of health systems and the role of health policy (in Canada or globally),q15,q33,q55
+q16,Fellow,Criterion,Common,Advancing host organizations mandate or priorities,q16,q34,q56
+q17,Fellow,Criterion,Common,Post-fellowship employment aligned with education and professional experience,q17,q35,q57
+q18,Fellow,Criterion,Unique,Better understanding of desired career trajectory and preparedness for employment after the fellowship,,,
+q19,Fellow,Criterion,Unique,Difficult to define success,,,
+q20,Host,Contribution,Common,Research/analytic skills and expertise,q1,q20,q40
+q21,Host,Contribution,Common,Capacity-building resource,q2,q21,q41
+q22,Host,Contribution,Common,Knowledge translation,q3,q22,q42
+q23,Host,Contribution,Common,"Networking, building relationships and collaboration",q4,q23,q43
+q24,Host,Contribution,Common,Leadership,q5,q24,q44
+q25,Host,Contribution,Common,"New perspectives, interventions, processes, methods or strategies",q6,q25,q45
+q26,Host,Contribution,Common,Providing mentorship or education,q7,q26,q46
+q27,Host,Contribution,Common,Limited to no contribution,q8,q27,q47
+q28,Host,Contribution,Unique,Strong work ethic,,,
+q29,Host,Criterion,Common,Establishment of networks or collaborative relationships,q11,q29,q51
+q30,Host,Criterion,Common,HSIF impact project completion or advancement,q12,q30,q52
+q31,Host,Criterion,Common,Development of enriched core competencies or other professional skills,q13,q31,q53
+q32,Host,Criterion,Common,Academic or research productivity,q14,q32,q54
+q33,Host,Criterion,Common,Better knowledge of health systems and the role of health policy (in Canada or globally),q15,q33,q55
+q34,Host,Criterion,Common,Advancing host organizations mandate or priorities,q16,q34,q56
+q35,Host,Criterion,Common,Post-fellowship employment aligned with education and professional experience,q17,q35,q57
+q36,Host,Criterion,Unique,Capacity of adaptation to different working environments,,,
+q37,Host,Criterion,Unique,Openness to new learning experiences,,,
+q38,Host,Criterion,Unique,Team cohesion and collegial interaction,,,
+q39,Host,Criterion,Unique,Positive experience by the Fellow,,,
+q40,Academic,Contribution,Common,Research/analytic skills and expertise,q1,q20,q40
+q41,Academic,Contribution,Common,Capacity-building resource,q2,q21,q41
+q42,Academic,Contribution,Common,Knowledge translation,q3,q22,q42
+q43,Academic,Contribution,Common,"Networking, building relationships and collaboration",q4,q23,q43
+q44,Academic,Contribution,Common,Leadership,q5,q24,q44
+q45,Academic,Contribution,Common,"New perspectives, interventions, processes, methods or strategies",q6,q25,q45
+q46,Academic,Contribution,Common,Providing mentorship or education,q7,q26,q46
+q47,Academic,Contribution,Common,Limited to no contribution,q8,q27,q47
+q48,Academic,Contribution,Unique,"Revealing the strengths and weaknesses of the current academic training environment, and opportunities for curriculum enhancement within HSPR",,,
+q49,Academic,Contribution,Unique,Identifying challenges and barriers to learning health systems,,,
+q50,Academic,,,,,,
+q51,Academic,Criterion,Common,Establishment of networks or collaborative relationships,q11,q29,q51
+q52,Academic,Criterion,Common,HSIF impact project completion or advancement,q12,q30,q52
+q53,Academic,Criterion,Common,Development of enriched core competencies or other professional skills,q13,q31,q53
+q54,Academic,Criterion,Common,Academic or research productivity,q14,q32,q54
+q55,Academic,Criterion,Common,Better knowledge of health systems and the role of health policy (in Canada or globally),q15,q33,q55
+q56,Academic,Criterion,Common,Advancing host organizations mandate or priorities,q16,q34,q56
+q57,Academic,Criterion,Common,Post-fellowship employment aligned with education and professional experience,q17,q35,q57
+q58,Academic,Criterion,Unique,Measurable impacts within the health system,,,
+q59,Academic,Criterion,Unique,Foundation for fellows research success,,,
