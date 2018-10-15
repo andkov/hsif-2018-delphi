@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>this script imports the raw data collected during quatitative phase 2 of Delphi study# this script prepares a state of data used as a standard point of departure for any subsequent reproducible analytics# Lines before the first chunk are invisible to Rmd/Rnw callers# Run to stitch a tech report of this script (used only in RStudio)knitr::stitch_rmd(</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p>This report was automatically generated with the R package <strong>knitr</strong>
+(version 1.20).</p>
+
+<h1>this script imports the raw data collected during quatitative phase 2 of Delphi study# this script prepares a state of data used as a standard point of departure for any subsequent reproducible analytics# Lines before the first chunk are invisible to Rmd/Rnw callers# Run to stitch a tech report of this script (used only in RStudio)knitr::stitch_rmd(</h1>
+
+<p>script = &ldquo;./manipulation/0-greeter.R&rdquo;,
+  output = &ldquo;./stitched-output/manipulation/0-greeter.md&rdquo;
+)## </p>
+
+<h2>processing file: 0-greeter.Rmd</h2>
+
+<h2>Error in parse_block(g[-1], g[1], params.src): duplicate label &#39;load-sources&#39;</h2>
+
+<h1>this command is typically executed by the ./manipulation/governor.Rrm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. # This is not called by knitr, because it&#39;s above the first chunk.cat(&ldquo;\f&rdquo;) # clear console when working in RStudio</h1>
+
+<h1>Call <code>base::source()</code> on any repo file that defines functions needed below.  Ideally, no real operations are performed.</h1>
+
+<h1>Attach these packages so their functions don&#39;t need to be qualified: <a href="http://r-pkgs.had.co.nz/namespace.html#search-pathlibrary(magrittr)">http://r-pkgs.had.co.nz/namespace.html#search-pathlibrary(magrittr)</a> #Pipes</h1>
+
+<p>path_input_micro &lt;- &ldquo;./data-unshared/raw/eDelphi-phase2.csv&quot;path_input_meta  &lt;- &rdquo;./data-public/raw/eDelphi-phase2-metadata.csv&quot;# path_input_meta  &lt;- &ldquo;./data-public/raw/eDelphi-phase2-metadata-edited.csv&rdquo;# test whether the file exists / the link is goodtestit::assert(&ldquo;File does not exist&rdquo;, base::file.exists(path_input_micro))testit::assert(&ldquo;File does not exist&rdquo;, base::file.exists(path_input_meta))# declare where you will store the product of this scriptpath_save &lt;- &ldquo;./data-unshared/derived/0-greeted.rds&rdquo;# See definitions of commonly  used objects in:source(&ldquo;./manipulation/object-glossary.R&rdquo;)   # object definitions## Warning in file(filename, &ldquo;r&rdquo;, encoding = encoding): cannot open file &#39;./</p>
+
+<h2>manipulation/object-glossary.R&#39;: No such file or directory</h2>
+
+<h2>Error in file(filename, &ldquo;r&rdquo;, encoding = encoding): cannot open the connection</h2>
+
+<h1>functions, the use of which is localized to this script# for commonly used function see ./manipulation/function-support.R</h1>
+
+<h1>column names are very long, isolate to a separate objectcol_names &lt;- readr::read_csv(path_input_micro,n_max = 1, col_names = FALSE) %&gt;% t()## Parsed with column specification:</h1>
+
+<h2>cols(</h2>
+
+<h2>.default = col_character()</h2>
+
+<h2>)</h2>
+
+<h2>See spec(&hellip;) for full column specifications.</h2>
+
+<h1>the main body of the survey, all the questionsds0       &lt;- readr::read_csv(path_input_micro,skip = 1,col_names = FALSE) %&gt;% as.data.frame() ## Parsed with column specification:</h1>
+
+<h2>cols(</h2>
+
+<h2>.default = col_integer(),</h2>
+
+<h2>X2 = col_character(),</h2>
+
+<h2>X52 = col_character()</h2>
+
+<h2>)</h2>
+
+<h2>See spec(&hellip;) for full column specifications.</h2>
+
+<h1>manually created object ()ds_meta   &lt;- readr::read_csv(path_input_meta)## Parsed with column specification:</h1>
+
+<h2>cols(</h2>
+
+<h2>qid = col_integer(),</h2>
+
+<h2>target = col_character(),</h2>
+
+<h2>subject = col_character(),</h2>
+
+<h2>component = col_character(),</h2>
+
+<h2>qlabel = col_character(),</h2>
+
+<h2>qid_fellow = col_integer(),</h2>
+
+<h2>qid_host = col_integer(),</h2>
+
+<h2>qid_academic = col_integer()</h2>
+
+<h2>)</h2>
+
+<p>ds0 %&gt;% dplyr::glimpse()## Observations: 78</p>
+
+<h2>Variables: 61</h2>
+
+<h2>$ X1  <int> 4, 10, 15, 20, 21, 22, 23, 37, 44, 50, 52, 57, 64, 65, 67,&hellip;</h2>
+
+<h2>$ X2  <chr> &ldquo;Academic Supervisor&rdquo;, &ldquo;Academic Supervisor&rdquo;, &ldquo;Academic Su&hellip;</h2>
+
+<h2>$ X3  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X4  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X5  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X6  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X7  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X8  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X9  <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X10 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X11 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X12 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X13 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X14 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X15 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X16 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X17 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X18 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X19 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X20 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X21 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X22 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X23 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X24 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X25 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X26 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X27 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X28 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X29 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X30 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X31 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X32 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X33 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X34 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X35 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X36 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X37 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X38 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X39 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X40 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X41 <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X42 <int> 5, 3, 5, 4, 1, 5, 5, 5, 5, 2, 3, 4, 5, 5, 4, 5, 4, 5, 4, 4&hellip;</h2>
+
+<h2>$ X43 <int> 5, 2, 5, 4, 1, 4, 5, 5, 5, 2, 4, 5, 5, 5, 4, 5, 3, 4, 3, 4&hellip;</h2>
+
+<h2>$ X44 <int> 4, 3, 5, 4, 1, 4, 5, 4, 4, 3, 3, 5, 5, 5, 4, 4, 4, 2, 3, 5&hellip;</h2>
+
+<h2>$ X45 <int> 5, 4, 5, 5, 1, 5, 5, 5, 4, 4, 5, 4, 5, 5, 5, 4, 4, 4, 4, 5&hellip;</h2>
+
+<h2>$ X46 <int> 5, 2, 5, 4, 1, 4, 4, 5, 4, 3, 2, 4, 5, NA, 5, 4, 4, 4, 3, &hellip;</h2>
+
+<h2>$ X47 <int> 4, 3, 5, 5, 1, 4, 4, 5, 3, 5, 3, 4, 5, NA, 5, 4, 4, 4, 4, &hellip;</h2>
+
+<h2>$ X48 <int> 5, 1, 3, 4, 1, 5, 5, 5, 3, 4, 3, 3, 5, NA, 4, 4, 4, 3, 3, &hellip;</h2>
+
+<h2>$ X49 <int> 1, 4, 1, 1, NA, 1, NA, 1, 1, NA, 1, 1, 1, NA, 2, 1, 2, 1, &hellip;</h2>
+
+<h2>$ X50 <int> 2, 3, 4, 4, 4, 4, 5, 4, 4, 4, 5, 5, 3, 5, 5, 4, 3, 4, 4, 3&hellip;</h2>
+
+<h2>$ X51 <int> 3, 2, 2, 4, 4, 3, 4, 4, 5, 5, 4, 3, 4, NA, 4, 3, 3, 5, 4, &hellip;</h2>
+
+<h2>$ X52 <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X53 <int> 5, 4, 3, 5, 5, 5, 4, 5, 5, 5, 4, 4, 5, 4, 5, 5, 5, 3, 4, 5&hellip;</h2>
+
+<h2>$ X54 <int> 5, 4, 4, 5, 5, 3, 5, 5, 5, 5, 4, NA, 5, 5, 4, 5, 5, 3, 5, &hellip;</h2>
+
+<h2>$ X55 <int> 5, 4, 4, 5, 5, 4, 5, 5, 3, 5, 5, 4, 5, 5, 5, 5, 5, 4, 5, 4&hellip;</h2>
+
+<h2>$ X56 <int> 5, 4, 5, 4, 5, 3, 5, 5, 3, 5, 4, 4, 5, 4, 3, 5, 3, 3, 4, 4&hellip;</h2>
+
+<h2>$ X57 <int> 5, 3, 2, 4, 5, 4, 5, 4, 5, 5, 5, 3, 5, 5, 5, 5, 5, 3, 4, 4&hellip;</h2>
+
+<h2>$ X58 <int> 5, 5, 4, 4, 5, 4, 5, 4, 5, 5, 4, 5, 5, 5, 4, 5, 5, 3, 4, 4&hellip;</h2>
+
+<h2>$ X59 <int> NA, NA, 4, 5, 5, NA, NA, 4, 5, 5, 5, 4, 5, 5, 5, 5, 5, 4, &hellip;</h2>
+
+<h2>$ X60 <int> 4, 3, 3, 4, 5, 2, 5, 4, 3, 4, 3, 4, 5, 3, 2, 2, 4, 3, 2, 4&hellip;</h2>
+
+<h2>$ X61 <int> 5, 4, 5, 5, 5, 4, 5, 5, 5, 5, 4, 3, 5, 4, 3, 4, 4, 2, 4, 3&hellip;</h2>
+
+<p>ds_meta %&gt;% dplyr::glimpse()## Observations: 59</p>
+
+<h2>Variables: 8</h2>
+
+<h2>$ qid          <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15&hellip;</h2>
+
+<h2>$ target       <chr> &quot;Fellow&rdquo;, &ldquo;Fellow&rdquo;, &ldquo;Fellow&rdquo;, &ldquo;Fellow&rdquo;, &ldquo;Fellow&rdquo;,&hellip;</h2>
+
+<h2>$ subject      <chr> &ldquo;Contribution&rdquo;, &ldquo;Contribution&rdquo;, &ldquo;Contribution&rdquo;, &ldquo;&hellip;</h2>
+
+<h2>$ component    <chr> &quot;Common&rdquo;, &ldquo;Common&rdquo;, &ldquo;Common&rdquo;, &ldquo;Common&rdquo;, &ldquo;Common&rdquo;,&hellip;</h2>
+
+<h2>$ qlabel       <chr> &ldquo;Research/analytic skills and expertise&rdquo;, &ldquo;Capaci&hellip;</h2>
+
+<h2>$ qid_fellow   <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15&hellip;</h2>
+
+<h2>$ qid_host     <int> 20, 21, 22, 23, 24, 25, 26, 27, NA, NA, 29, 30, 3&hellip;</h2>
+
+<h2>$ qid_academic <int> 40, 41, 42, 43, 44, 45, 46, 47, NA, NA, 51, 52, 5&hellip;</h2>
+
+<h1>rename the first two columns ds1 &lt;- ds0 %&gt;%</h1>
+
+<p>dplyr::rename_( 
+    &quot;response_id&rdquo;     = &ldquo;X1&rdquo;,
+    &ldquo;respondent_role&rdquo; = &ldquo;X2&rdquo;
+  )ds1 %&gt;% dplyr::glimpse()## Observations: 78</p>
+
+<h2>Variables: 61</h2>
+
+<h2>$ response_id     <int> 4, 10, 15, 20, 21, 22, 23, 37, 44, 50, 52, 57,&hellip;</h2>
+
+<h2>$ respondent_role <chr> &ldquo;Academic Supervisor&rdquo;, &ldquo;Academic Supervisor&rdquo;, &hellip;</h2>
+
+<h2>$ X3              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X4              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X5              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X6              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X7              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X8              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X9              <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X10             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X11             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X12             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X13             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X14             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X15             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X16             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X17             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X18             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X19             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X20             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X21             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X22             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X23             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X24             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X25             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X26             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X27             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X28             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X29             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X30             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X31             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X32             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X33             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X34             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X35             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X36             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X37             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X38             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X39             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X40             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X41             <int> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X42             <int> 5, 3, 5, 4, 1, 5, 5, 5, 5, 2, 3, 4, 5, 5, 4, 5&hellip;</h2>
+
+<h2>$ X43             <int> 5, 2, 5, 4, 1, 4, 5, 5, 5, 2, 4, 5, 5, 5, 4, 5&hellip;</h2>
+
+<h2>$ X44             <int> 4, 3, 5, 4, 1, 4, 5, 4, 4, 3, 3, 5, 5, 5, 4, 4&hellip;</h2>
+
+<h2>$ X45             <int> 5, 4, 5, 5, 1, 5, 5, 5, 4, 4, 5, 4, 5, 5, 5, 4&hellip;</h2>
+
+<h2>$ X46             <int> 5, 2, 5, 4, 1, 4, 4, 5, 4, 3, 2, 4, 5, NA, 5, &hellip;</h2>
+
+<h2>$ X47             <int> 4, 3, 5, 5, 1, 4, 4, 5, 3, 5, 3, 4, 5, NA, 5, &hellip;</h2>
+
+<h2>$ X48             <int> 5, 1, 3, 4, 1, 5, 5, 5, 3, 4, 3, 3, 5, NA, 4, &hellip;</h2>
+
+<h2>$ X49             <int> 1, 4, 1, 1, NA, 1, NA, 1, 1, NA, 1, 1, 1, NA, &hellip;</h2>
+
+<h2>$ X50             <int> 2, 3, 4, 4, 4, 4, 5, 4, 4, 4, 5, 5, 3, 5, 5, 4&hellip;</h2>
+
+<h2>$ X51             <int> 3, 2, 2, 4, 4, 3, 4, 4, 5, 5, 4, 3, 4, NA, 4, &hellip;</h2>
+
+<h2>$ X52             <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA&hellip;</h2>
+
+<h2>$ X53             <int> 5, 4, 3, 5, 5, 5, 4, 5, 5, 5, 4, 4, 5, 4, 5, 5&hellip;</h2>
+
+<h2>$ X54             <int> 5, 4, 4, 5, 5, 3, 5, 5, 5, 5, 4, NA, 5, 5, 4, &hellip;</h2>
+
+<h2>$ X55             <int> 5, 4, 4, 5, 5, 4, 5, 5, 3, 5, 5, 4, 5, 5, 5, 5&hellip;</h2>
+
+<h2>$ X56             <int> 5, 4, 5, 4, 5, 3, 5, 5, 3, 5, 4, 4, 5, 4, 3, 5&hellip;</h2>
+
+<h2>$ X57             <int> 5, 3, 2, 4, 5, 4, 5, 4, 5, 5, 5, 3, 5, 5, 5, 5&hellip;</h2>
+
+<h2>$ X58             <int> 5, 5, 4, 4, 5, 4, 5, 4, 5, 5, 4, 5, 5, 5, 4, 5&hellip;</h2>
+
+<h2>$ X59             <int> NA, NA, 4, 5, 5, NA, NA, 4, 5, 5, 5, 4, 5, 5, &hellip;</h2>
+
+<h2>$ X60             <int> 4, 3, 3, 4, 5, 2, 5, 4, 3, 4, 3, 4, 5, 3, 2, 2&hellip;</h2>
+
+<h2>$ X61             <int> 5, 4, 5, 5, 5, 4, 5, 5, 5, 5, 4, 3, 5, 4, 3, 4&hellip;</h2>
+
+<p>(variables_static  &lt;- c(&ldquo;response_id&rdquo;,&ldquo;respondent_role&rdquo;)) ## [1] &ldquo;response_id&rdquo;     &ldquo;respondent_role&rdquo;
+(variables_dynamic &lt;- setdiff(names(ds1), variables_static) )##  [1] &ldquo;X3&rdquo;  &ldquo;X4&rdquo;  &ldquo;X5&rdquo;  &ldquo;X6&rdquo;  &ldquo;X7&rdquo;  &ldquo;X8&rdquo;  &ldquo;X9&rdquo;  &ldquo;X10&rdquo; &ldquo;X11&rdquo; &ldquo;X12&rdquo; &ldquo;X13&rdquo;</p>
+
+<h2>[12] &ldquo;X14&rdquo; &ldquo;X15&rdquo; &ldquo;X16&rdquo; &ldquo;X17&rdquo; &ldquo;X18&rdquo; &ldquo;X19&rdquo; &ldquo;X20&rdquo; &ldquo;X21&rdquo; &ldquo;X22&rdquo; &ldquo;X23&rdquo; &ldquo;X24&rdquo;</h2>
+
+<h2>[23] &ldquo;X25&rdquo; &ldquo;X26&rdquo; &ldquo;X27&rdquo; &ldquo;X28&rdquo; &ldquo;X29&rdquo; &ldquo;X30&rdquo; &ldquo;X31&rdquo; &ldquo;X32&rdquo; &ldquo;X33&rdquo; &ldquo;X34&rdquo; &ldquo;X35&rdquo;</h2>
+
+<h2>[34] &ldquo;X36&rdquo; &ldquo;X37&rdquo; &ldquo;X38&rdquo; &ldquo;X39&rdquo; &ldquo;X40&rdquo; &ldquo;X41&rdquo; &ldquo;X42&rdquo; &ldquo;X43&rdquo; &ldquo;X44&rdquo; &ldquo;X45&rdquo; &ldquo;X46&rdquo;</h2>
+
+<h2>[45] &ldquo;X47&rdquo; &ldquo;X48&rdquo; &ldquo;X49&rdquo; &ldquo;X50&rdquo; &ldquo;X51&rdquo; &ldquo;X52&rdquo; &ldquo;X53&rdquo; &ldquo;X54&rdquo; &ldquo;X55&rdquo; &ldquo;X56&rdquo; &ldquo;X57&rdquo;</h2>
+
+<h2>[56] &ldquo;X58&rdquo; &ldquo;X59&rdquo; &ldquo;X60&rdquo; &ldquo;X61&rdquo;</h2>
+
+<p>ds2 &lt;- ds1 %&gt;% 
+  tidyr::gather_(&ldquo;qid&rdquo;,&ldquo;response_value&rdquo;, variables_dynamic) %&gt;% 
+  dplyr::mutate(
+    qid = as.integer(gsub(&ldquo;X&rdquo;,&ldquo;&rdquo;,qid)) - 2, # because of the first two variables
+    response_value = as.integer(response_value)
+  ) %&gt;% 
+dplyr::left_join(ds_meta, by = &ldquo;qid&rdquo;) %&gt;% 
+  # dplyr::filter(!is.na(response_value)) %&gt;% 
+  dplyr::select(
+    response_id, respondent_role, 
+    qid, qlabel, response_value, dplyr::everything()
+  ) ds2 %&gt;% dplyr::glimpse(40)## Observations: 4,602</p>
+
+<h2>Variables: 11</h2>
+
+<h2>$ response_id     <int> 4, 10, 15, &hellip;</h2>
+
+<h2>$ respondent_role <chr> &ldquo;Academic S&hellip;</h2>
+
+<h2>$ qid             <dbl> 1, 1, 1, 1,&hellip;</h2>
+
+<h2>$ qlabel          <chr> &quot;Research/a&hellip;</h2>
+
+<h2>$ response_value  <int> NA, NA, NA,&hellip;</h2>
+
+<h2>$ target          <chr> &quot;Fellow&rdquo;, &ldquo;&hellip;</h2>
+
+<h2>$ subject         <chr> &quot;Contributi&hellip;</h2>
+
+<h2>$ component       <chr> &quot;Common&rdquo;, &ldquo;&hellip;</h2>
+
+<h2>$ qid_fellow      <int> 1, 1, 1, 1,&hellip;</h2>
+
+<h2>$ qid_host        <int> 20, 20, 20,&hellip;</h2>
+
+<h2>$ qid_academic    <int> 40, 40, 40,&hellip;</h2>
+
+<h1>show groupingsds_descriptives &lt;- ds2 %&gt;%</h1>
+
+<p># dplyr::filter(qid == 1) %&gt;% 
+  # dplyr::filter(respondent_role == &quot;Health System Impact Fellow&rdquo;) %&gt;% 
+  dplyr::group_by(qid, qlabel, respondent_role,target, subject, component) %&gt;%
+  # dplyr::group_by(qid, qlabel) %&gt;% 
+  dplyr::summarize(
+    n_responses = n(),
+    mean = mean(response_value, na.rm = T),
+    sd   = sd(response_value,na.rm = T)
+  )# subset unique questions into a separate data frameds2 %&gt;% dplyr::glimpse(50)## Observations: 4,602</p>
+
+<h2>Variables: 11</h2>
+
+<h2>$ response_id     <int> 4, 10, 15, 20, 21, 22&hellip;</h2>
+
+<h2>$ respondent_role <chr> &ldquo;Academic Supervisor&rdquo;&hellip;</h2>
+
+<h2>$ qid             <dbl> 1, 1, 1, 1, 1, 1, 1, &hellip;</h2>
+
+<h2>$ qlabel          <chr> &ldquo;Research/analytic sk&hellip;</h2>
+
+<h2>$ response_value  <int> NA, NA, NA, NA, NA, N&hellip;</h2>
+
+<h2>$ target          <chr> &quot;Fellow&rdquo;, &ldquo;Fellow&rdquo;, &ldquo;&hellip;</h2>
+
+<h2>$ subject         <chr> &quot;Contribution&rdquo;, &ldquo;Cont&hellip;</h2>
+
+<h2>$ component       <chr> &quot;Common&rdquo;, &ldquo;Common&rdquo;, &ldquo;&hellip;</h2>
+
+<h2>$ qid_fellow      <int> 1, 1, 1, 1, 1, 1, 1, &hellip;</h2>
+
+<h2>$ qid_host        <int> 20, 20, 20, 20, 20, 2&hellip;</h2>
+
+<h2>$ qid_academic    <int> 40, 40, 40, 40, 40, 4&hellip;</h2>
+
+<p>readr::write_csv(ds2, &rdquo;./data-unshared/derived/ds2.csv&quot;)</p>
+
+<p>The R session information (including the OS info, R version and all
+packages used):</p>
+
+<p>sessionInfo()## R version 3.4.4 (2018-03-15)</p>
+
+<h2>Platform: x86_64-w64-mingw32/x64 (64-bit)</h2>
+
+<h2>Running under: Windows &gt;= 8 x64 (build 9200)</h2>
+
+<h2>Matrix products: default</h2>
+
+<h2>locale:</h2>
+
+<h2>[1] LC_COLLATE=English_United States.1252</h2>
+
+<h2>[2] LC_CTYPE=English_United States.1252</h2>
+
+<h2>[3] LC_MONETARY=English_United States.1252</h2>
+
+<h2>[4] LC_NUMERIC=C</h2>
+
+<h2>[5] LC_TIME=English_United States.1252</h2>
+
+<h2>attached base packages:</h2>
+
+<h2>[1] grid      stats     graphics  grDevices utils     datasets  methods</h2>
+
+<h2>[8] base</h2>
+
+<h2>other attached packages:</h2>
+
+<h2>[1] bindrcpp_0.2.2     magrittr_1.5       RColorBrewer_1.1-2</h2>
+
+<h2>[4] dichromat_2.0-0    ggplot2_3.0.0      extrafont_0.17</h2>
+
+<h2>loaded via a namespace (and not attached):</h2>
+
+<h2>[1] Rcpp_0.12.18      highr_0.6         pillar_1.2.1</h2>
+
+<h2>[4] compiler_3.4.4    plyr_1.8.4        bindr_0.1.1</h2>
+
+<h2>[7] prettyunits_1.0.2 tools_3.4.4       progress_1.2.0</h2>
+
+<h2>[10] evaluate_0.10.1   tibble_1.4.2      gtable_0.2.0</h2>
+
+<h2>[13] pkgconfig_2.0.1   rlang_0.2.2       GGally_1.4.0</h2>
+
+<h2>[16] rstudioapi_0.7    yaml_2.1.19       Rttf2pt1_1.3.6</h2>
+
+<h2>[19] knitr_1.20        stringr_1.3.1     withr_2.1.1</h2>
+
+<h2>[22] dplyr_0.7.6       hms_0.4.1         tidyselect_0.2.3</h2>
+
+<h2>[25] cowplot_0.9.3     reshape_0.8.7     glue_1.3.0</h2>
+
+<h2>[28] R6_2.2.2          tidyr_0.8.1       purrr_0.2.5</h2>
+
+<h2>[31] readr_1.1.1       reshape2_1.4.3    extrafontdb_1.0</h2>
+
+<h2>[34] scales_1.0.0      testit_0.8        assertthat_0.2.0</h2>
+
+<h2>[37] colorspace_1.3-2  labeling_0.3      stringi_1.1.7</h2>
+
+<h2>[40] lazyeval_0.2.1    munsell_0.5.0     markdown_0.8</h2>
+
+<h2>[43] crayon_1.3.4</h2>
+
+<p>Sys.time()## [1] &ldquo;2018-10-14 18:24:08 PDT&rdquo;</p>
+
+</body>
+
+</html>

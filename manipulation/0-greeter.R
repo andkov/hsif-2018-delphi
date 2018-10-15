@@ -5,7 +5,7 @@
 # Run to stitch a tech report of this script (used only in RStudio)
 # knitr::stitch_rmd(
 #   script = "./manipulation/0-greeter.R",
-#   output = "./manipulation/stitched-output/0-greeter.md"
+#   output = "./stitched-output/manipulation/0-greeter.md"
 # )
 # this command is typically executed by the ./manipulation/governor.R
 
@@ -52,53 +52,6 @@ ds0 %>% dplyr::glimpse()
 ds_meta %>% dplyr::glimpse()
 
 
-# ---- extract-live-meta -------------------------
-# in order to preserve the original item descriptions, as given by survey results
-# let us create a meta data object that would deconstruct survey meta data
-# here we will create the meta data to be applied above (retroactively)
-
-# the first two columns contain response id and respondent role
-# (stem_cols      <- col_names[1:2] )
-# # remaining columns are survey questions
-# (survey_columns <- col_names[3:length(col_names)] )
-# ls_survey <- list() # empty shell to populate
-# for(i in seq_along(survey_columns)){
-#   # i <- 2
-#   # qname <- paste0("q",i) # q for question
-#   subject <- survey_columns[i]
-#   
-#   regex1 <- "^(.+)Response options include(.+)\\[(.+)?\\]$"
-#   ls_survey[[i]] <- list()
-#   ls_survey[[i]][["qid"]] <- i
-#   ls_survey[[i]][["stem"]]  <- gsub(regex1,"\\1", survey_columns[i])
-#   ls_survey[[i]][["scale"]] <- gsub(regex1,"\\2", survey_columns[i])
-#   ls_survey[[i]][["item"]]  <- gsub(regex1,"\\3", survey_columns[i])
-# }
-# ls_meta <- list()
-# for(i in seq_along(ls_survey)){
-#   ls_meta[[i]] <- ls_survey[[i]] #%>% as.data.frame()
-# }
-# lapply(ls_meta, names)
-# ds_meta_live <- dplyr::bind_rows(ls_meta)
-# ds_meta_live %>% dplyr::glimpse()
-# ds_meta <- ds_meta %>% dplyr::left_join(ds_meta_live, by = "qid")
-# ds_meta %>% dplyr::glimpse()
-
-# # extract the items questions for easier handling
-# ls_new <- list()
-# for(i in names(ls_survey)){
-#   ls_new[[i]] <- ls_survey[[i]][["item"]] %>% as.data.frame()
-# }
-# ds_new <- dplyr::bind_rows(ls_new)
-# # write down so you can pick it up in excel
-# readr::write_csv(ds_new,"./data-unshared/derived/q_names.csv")
-# # next, add meta to "./data-unshared/raw/eDelphi-phase2-metadata.csv"
-# # use the excel spread sheet of the same name to make pretty
-# ds0 %>% dplyr::glimpse() 
-
-
-
-
 # ---- tweak-data --------------------------------------------------------------
 # rename the first two columns 
 ds1 <- ds0 %>% 
@@ -138,14 +91,9 @@ ds_descriptives <- ds2 %>%
     mean = mean(response_value, na.rm = T),
     sd   = sd(response_value,na.rm = T)
   )
-  
-
 
 # subset unique questions into a separate data frame
 ds2 %>% dplyr::glimpse(50)
-
-  
-  
 
 # ---- save-to-disk ----------------------------
 readr::write_csv(ds2, "./data-unshared/derived/ds2.csv")
