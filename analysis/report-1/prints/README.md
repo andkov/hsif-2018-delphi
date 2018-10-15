@@ -25,7 +25,7 @@
 ![criterion-all][criterion-all]
 
 
-[contribution-all]:../analysis/report-1/prints/Contribution.jpg
+[contribution-all]:prints/Contribution.jpg
 [contribution-common]:../analysis/report-1/prints/Contribution-Common.jpg
 [contribution-unique]:../../analysis/report-1/prints/Contribution-Unique.jpg
 
