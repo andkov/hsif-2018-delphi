@@ -24,6 +24,7 @@ library(magrittr) #Pipes
 # ---- declare-globals ---------------------------------------------------------
 path_input_micro <- "./data-unshared/raw/eDelphi-phase2.csv"
 path_input_meta  <- "./data-public/raw/eDelphi-phase2-metadata.csv"
+# path_input_meta  <- "./data-public/raw/eDelphi-phase2-metadata-edited.csv"
 
 # test whether the file exists / the link is good
 testit::assert("File does not exist", base::file.exists(path_input_micro))
