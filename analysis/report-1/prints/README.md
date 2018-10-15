@@ -25,11 +25,11 @@
 ![criterion-all][criterion-all]
 
 
-[contribution-all]:prints/Contribution.jpg
-[contribution-common]:../analysis/report-1/prints/Contribution-Common.jpg
-[contribution-unique]:../../analysis/report-1/prints/Contribution-Unique.jpg
+[contribution-all]:Contribution.jpg
+[contribution-common]:Contribution-Common.jpg
+[contribution-unique]:Contribution-Unique.jpg
 
 
-[criterion-all]:../../analysis/report-1/prints/Criterion.jpg
-[criterion-common]:../../analysis/report-1/prints/Criterion-Common.jpg
-[criterion-unique]:../../analysis/report-1/prints/Criterion-Unique.jpg
+[criterion-all]:Criterion.jpg
+[criterion-common]:Criterion-Common.jpg
+[criterion-unique]:Criterion-Unique.jpg
