@@ -25,6 +25,20 @@ In Round 2, participants ranked their agreement with the items generated in Roun
 
 ## Results
 
-![g1][g1]
+- data preparation script `./manipulation/0-greeter.R` inputs the survey data and prepares it for analysis
+- analysis script `./analysis/report-1/report-1.R` generates the graphs with descriptive statistics and the table of results
+- view custom view of the graphs in `./analysis/report-1/prints/README.md`
+- download the table of results in long form from `./analysis/report-1/products/ds_descriptives.csv`
 
-[g1]:analysis/report-1/prints/Contribution.jpg
+![contribution-all][contribution-all]
+
+![criterion-all][criterion-all]
+
+[contribution-all]:analysis/report-1/prints/Contribution.jpg
+[contribution-common]:analysis/report-1/prints/Contribution-Common.jpg
+[contribution-unique]:analysis/report-1/prints/Contribution-Unique.jpg
+
+
+[criterion-all]:analysis/report-1/prints/Criterion.jpg
+[criterion-common]:analysis/report-1/prints/Criterion-Common.jpg
+[criterion-unique]:analysis/report-1/prints/Criterion-Unique.jpg
