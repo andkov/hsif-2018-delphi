@@ -1,4 +1,12 @@
 # knitr::stitch_rmd(script="./analysis/report-1/report-1.R", output="./analysis/report-1/report-1.md")
+# Lines before the first chunk are invisible to Rmd/Rnw callers
+# Run to stitch a tech report of this script (used only in RStudio)
+# knitr::stitch_rmd(
+#   script = "./analysis/report-1/report-1.R",
+#   output = "./stitched-output/analysis/report-1.md"
+# )
+# this command is typically executed by the ./manipulation/governor.R
+
 
 rm(list=ls(all=TRUE)) #Clear the memory of variables from previous run. This is not called by knitr, because it's above the first chunk.
 
