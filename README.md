@@ -39,11 +39,11 @@ In Round 1, two open-ended questions were administered to each group (see APPEND
 In Round 2, participants ranked their agreement with the items generated in Round 1 on a 5-point Likert-type scale (0 to 4) (see APPENDIX B). Quantitative analyses was conducted using Kendall’s W to assess the level of agreement with ranking and a principal components analysis was conducted to determine if there was consensus among each group of stakeholders (4). All quantitative analyses were performed using SPSS for Mac (version 24.0, IBM corporation, Armonk, NY, USA). Ethical clearance for the study was approved by the University of Waterloo Ethics Review Board (#?).
 
 
-[contribution-all]:analysis/report-1/prints/Contribution.jpg
+[contribution-all]:libs/images//prints/Contribution.jpg
 [contribution-common]:analysis/report-1/prints/Contribution-Common.jpg
 [contribution-unique]:analysis/report-1/prints/Contribution-Unique.jpg
 
 
-[criterion-all]:analysis/report-1/prints/Criterion.jpg
+[criterion-all]:libs/images/prints/Criterion.jpg
 [criterion-common]:analysis/report-1/prints/Criterion-Common.jpg
 [criterion-unique]:analysis/report-1/prints/Criterion-Unique.jpg
