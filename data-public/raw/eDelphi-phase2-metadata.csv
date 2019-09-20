@@ -1,7 +1,7 @@
 qid,target,subject,component,qlabel,qid_fellow,qid_host,qid_academic
 1,Fellow,Contribution,Common,Research/analytic skills and expertise,1,20,40
 2,Fellow,Contribution,Common,Capacity-building resource,2,21,41
-3,Fellow,Contribution,Common,Knowledge Translation,3,22,42
+3,Fellow,Contribution,Common,Knowledge translation,3,22,42
 4,Fellow,Contribution,Common,"Networking, building relationships and collaboration",4,23,43
 5,Fellow,Contribution,Common,Leadership,5,24,44
 6,Fellow,Contribution,Common,"New perspectives, interventions,
@@ -25,7 +25,7 @@ preparedness for employment after the fellowship",18,,
 19,Fellow,Criterion,Unique,Difficult to define success,19,,
 20,Host,Contribution,Common,Research/analytic skills and expertise,1,20,40
 21,Host,Contribution,Common,Capacity-building resource,2,21,41
-22,Host,Contribution,Common,Knowledge Translation,3,22,42
+22,Host,Contribution,Common,Knowledge translation,3,22,42
 23,Host,Contribution,Common,"Networking, building relationships and collaboration",4,23,43
 24,Host,Contribution,Common,Leadership,5,24,44
 25,Host,Contribution,Common,"New perspectives, interventions,
@@ -49,7 +49,7 @@ preparedness for employment after the fellowship",18,,
 39,Host,Criterion,Unique,Positive experience by the Fellow,,39,
 40,Academic,Contribution,Common,Research/analytic skills and expertise,1,20,40
 41,Academic,Contribution,Common,Capacity-building resource,2,21,41
-42,Academic,Contribution,Common,Knowledge Translation,3,22,42
+42,Academic,Contribution,Common,Knowledge translation,3,22,42
 43,Academic,Contribution,Common,"Networking, building relationships and collaboration",4,23,43
 44,Academic,Contribution,Common,Leadership,5,24,44
 45,Academic,Contribution,Common,"New perspectives, interventions,

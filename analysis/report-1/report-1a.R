@@ -350,7 +350,7 @@ one_bar_height <- 22
 header_height <- 8
 local_title = "Please rate your agreement with the use of each of the following CRITERIA (identified in Round 1) 
 to evaluate the SUCCESS of your Health System Impact Fellowship. 
-(Responses include: 1-Strongly disagree, 2-Disagree, 3-Neutral, 4-Agree, 5-Strongly agree )"
+(Responses include: 1-Strongly disagree, 2-Disagree, 3-Neutral, 4-Agree, 5-Strongly agree)"
 
 i_subject   <- "Criterion"
 i_component <- "Common"
@@ -398,7 +398,7 @@ one_bar_height <- 22
 header_height <- 8
 local_title = "Please rate your agreement with each of the following CONTRIBUTION (identified in Round 1) 
 that Health System Impact FELLOWS have made to your respective organization
-(Responses include: 1-Strongly disagree, 2-Disagree, 3-Neutral, 4-Agree, 5-Strongly agree )"
+(Responses include: 1-Strongly disagree, 2-Disagree, 3-Neutral, 4-Agree, 5-Strongly agree)"
 
 i_subject   <- "Contribution"
 i_component <- "Common"
